@@ -1,11 +1,9 @@
-from ast import In
-from email.policy import default
-from ..db.session import Base
+from backend.db.base import Base
 from sqlalchemy import Column, String, Integer, Float
 
 
 class Item(Base):
-    __table__name = "items"
+    __tablename__ = "items"
 
     id = Column(Integer, primary_key=True, index=True)
     itemname = Column(String, nullable=False)
