@@ -1,13 +1,12 @@
-from backend.models import item
 from fastapi.testclient import TestClient
-from tests.utils import utils
+from backend.tests.utils import utils
 
 
 def test_create_item(client: TestClient):
     itemname = utils.random_string()
     price = utils.random_float()
     response = client.post(
-        "/items",
+        "/items/",
         json={"itemname": itemname, "price": price},
     )
     assert response.status_code == 200

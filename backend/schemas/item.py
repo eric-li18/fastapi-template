@@ -26,8 +26,6 @@ class Item(ItemBase):
     id: int
     itemname: str
     price: float
-    quantity: int
-    description: str
 
     # Tells the Pydantic model to read data in dict and ORM model:
     #
