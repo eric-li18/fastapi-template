@@ -3,8 +3,6 @@ from pydantic import BaseSettings, PostgresDsn, validator
 
 
 class Settings(BaseSettings):
-    ENVIRONMENT: str
-
     POSTGRES_SERVER: str
     POSTGRES_PASSWORD: str
     POSTGRES_DB: str
@@ -16,14 +14,12 @@ class Settings(BaseSettings):
         if isinstance(v, str):
             return v
 
-        hosts = {"dev": "localhost", "prod": values.get("ENVIRONMENT")}
-
         return PostgresDsn.build(
             scheme="postgresql",
             user=values.get("POSTGRES_USER"),
             password=values.get("POSTGRES_PASSWORD"),
-            host=hosts.get(values.get("ENVIRONMENT")),
-            path=f"/{values.get('POSTGRES_DB') or ''}",
+            host=values.get("POSTGRES_SERVER"),
+            path=f"/{values.get('POSTGRES_DB')}",
         )
 
     class Config:
