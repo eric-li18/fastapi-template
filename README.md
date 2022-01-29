@@ -1,4 +1,3 @@
-<h1 style="text-align:center"> </h1>
 <header>
   <h2 align="center">⚡ FastAPI Template</h3>
   <p align="center">
