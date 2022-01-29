@@ -1,5 +1,10 @@
-<h1 style="text-align:center">⚡ FastAPI Template</h1>
-A barebones FastAPI Template repository for creating a backend REST API server.
+<h1 style="text-align:center"> </h1>
+<header>
+  <h2 align="center">⚡ FastAPI Template</h3>
+  <p align="center">
+    A barebones FastAPI Template repository for creating a backend REST API server.
+  </p>
+</header>
 
 Several features are included in the template:
 - 🖊️ [Poetry](https://python-poetry.org/docs/master/) Dependency Management 
