@@ -1,6 +1,11 @@
 version: '3.7'
 
 services:
+  backend:
+    container_name: apiserver
+    image: 
+    ports: 
+      - 8000:8000
   database:
     container_name: postgres
     image: postgres:13
